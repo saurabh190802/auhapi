@@ -1,0 +1,32 @@
+from django.contrib import admin
+from auhapi.models import User
+
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+
+
+class UserMOdelAdmin(BaseUserAdmin):
+    # The fields to be used in displaying the User model.
+    # These override the definitions on the base UserMOdelAdmin
+    # that reference specific fields on auth.User.
+    list_display = ('id','email', 'name', 'tc', 'is_admin')
+    list_filter = ('is_admin',)
+    fieldsets = (
+        ('User Credentials', {'fields': ('email', 'password')}),
+        ('Personal info', {'fields': ('name','tc',)}),
+        ('Permissions', {'fields': ('is_admin',)}),
+    )
+    # add_fieldsets is not a standard ModelAdmin attribute. UserMOdelAdmin
+    # overrides get_fieldsets to use this attribute when creating a user.
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'name','tc', 'password1', 'password2'),
+        }),
+    )
+    search_fields = ('email',)
+    ordering = ('email','id',)
+    filter_horizontal = ()
+
+
+# Now register the new UserMOdelAdmin...
+admin.site.register(User, UserMOdelAdmin)

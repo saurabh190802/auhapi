@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "f8b80e4e-032f-4007-803b-8edd961eea73",
+		"name": "djangoauhapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19698927"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n        \"email\": \r\n            \"saurabhsatapathy0@gmail.com\"\r\n        ,\r\n        \"name\": \r\n            \"saurabh\"\r\n        ,\r\n        \"password\": \r\n            \"123456\"\r\n        ,\r\n        \"password2\": \r\n            \"123456\"\r\n        ,\r\n        \"tc\": \r\n            \"True\"\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auhapi/user/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auhapi",
+						"user",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n        \"email\": \r\n            \"saurabhsatapathy0@gmail.com\"\r\n        ,\r\n        \"password\": \r\n            \"123456\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auhapi/user/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auhapi",
+						"user",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzMzkyNTcwLCJpYXQiOjE2NTMzOTEzNzAsImp0aSI6IjlhYzkyMjkyZmY5ZjRmNzE4OTlkMzVhNzc3YWY5ZTYwIiwidXNlcl9pZCI6Nn0.v_Y8pkQN8QLoM97nmQPgQCZyp8VcKsDay2_slcy7HdU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auhapi/user/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auhapi",
+						"user",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change User Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzMzkyNTcwLCJpYXQiOjE2NTMzOTEzNzAsImp0aSI6IjlhYzkyMjkyZmY5ZjRmNzE4OTlkMzVhNzc3YWY5ZTYwIiwidXNlcl9pZCI6Nn0.v_Y8pkQN8QLoM97nmQPgQCZyp8VcKsDay2_slcy7HdU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"password\": \r\n            \"sau123\"\r\n        ,\r\n        \"password2\": \r\n            \"sau123\"\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auhapi/user/changepassword/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auhapi",
+						"user",
+						"changepassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Password Reset Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzMzkzNjc1LCJpYXQiOjE2NTMzOTI0NzUsImp0aSI6IjU3NDlmMjA5MmYxMDQyZmU5MjQ1NDgwMzMxZDQzNTdjIiwidXNlcl9pZCI6Nn0.Q2Br71b8P8KKqP_SCc2zD_pKIaDarTvofqTx7ACVKtk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"saurabhsatapathy0@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auhapi/user/send-reset-password-email/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auhapi",
+						"user",
+						"send-reset-password-email",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset User Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"password\": \r\n            \"123456\"\r\n        ,\r\n        \"password2\": \r\n            \"123456\"\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auhapi/user/reset-password/Ng/b5xyas-566fb8850fae16ef7e2b985fa7aca76c/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auhapi",
+						"user",
+						"reset-password",
+						"Ng",
+						"b5xyas-566fb8850fae16ef7e2b985fa7aca76c",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
