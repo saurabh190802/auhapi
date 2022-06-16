@@ -86,3 +86,4 @@ class UserPasswordResetView(APIView):
         return Response({'msg': 'Password Reset Successfully'}, status=status.HTTP_200_OK)
 
 
+#end
